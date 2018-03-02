@@ -10,6 +10,14 @@ app.get('/', (req, res) => {
   );
 });
 
+app.get('/error', (req, res) => {
+  res.status(500).json(
+    {
+      msg: 'Testing A Hard Error'
+    }
+  );
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, ()=>{
